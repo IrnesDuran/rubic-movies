@@ -4,7 +4,6 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import HomePage from './pages/Homepage/Homepage';
 import ItemPage from './pages/ItemPage/ItemPage';
-import Footer from  './components/Footer/Footer';
 
 import Navbar from './components/Navbar/Navbar';
 
@@ -19,7 +18,6 @@ function App() {
         <Route path='/tv-shows' component={HomePage}/>
         <Route path='/:item' component={ItemPage} />
       </Switch>
-      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,66 @@
+.poster-container{
+    width:40%;
+    margin: auto;
+
+    .genre {
+        display: inline-block;
+        background-color: gray;
+        border-radius: 100px;
+        padding:3px  10px;
+        margin: 5px;
+        color: white;
+        box-shadow: 1px 3px 3px rgba(black, 0.3);
+    }
+
+    .genres {
+        text-align: center;
+        margin: 15px;
+    }
+}
+
+.trailer-container{
+    width:100%;
+}
+
+.arrow {
+    cursor: pointer;
+    margin: 20px 0;
+
+}
+
+.content {
+    margin: 0;
+}
+
+.content-title{
+    background-color: black;
+    font-size: x-large;
+    margin-top: -10px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: .18rem;
+    text-align: center;
+    margin-bottom: 10px;
+
+    .title {
+        background-image: linear-gradient(to right, #00F260, #0575e6);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.overview {
+    margin:30px 0;
+    margin-bottom:100px
+}
+
+@media screen and (max-width: 600px) {
+    .poster-container{
+        width:90%;
+    }
+    .title {
+        font-size:large;
+    }
+}

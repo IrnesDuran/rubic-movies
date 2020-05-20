@@ -1,4 +1,5 @@
 import React from 'react';
+import './FormInput.styles.scss';
 
 import {connect} from 'react-redux';
 
@@ -6,9 +7,9 @@ export const FormInput =(props) => {
   const {setSearchField,search} = props;
 
   return(
-    <div className='group mx-10 my-6' >
+    <div className='input-container' >
         <input 
-            className='outline-none border border-black rounded-md py-1 px-3 focus:border-teal-500 w-full'
+            className='input-field'
             onChange={setSearchField}
             name="search" 
             type='search'

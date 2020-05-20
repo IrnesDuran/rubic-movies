@@ -1,7 +1,5 @@
 React Developer assignment
 
-
-The purpose of this assignment is to have candidates create a small web app so the Rubicon Team can have a better understanding of, and insight in the knowledge and the skill a candidate possesses. This makes it easier for you (and for us) to stand out from the crowd and present you in the best way possible.
 Assignment description:
 
 The app needs to have the functionalities of displaying the top 10 rated TV shows and the top 10 movies, a search function for both and a detail view for individual items.

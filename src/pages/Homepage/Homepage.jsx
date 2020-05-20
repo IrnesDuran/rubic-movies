@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+
+import './Homepage.styles.scss';
 //Redux
 import {connect} from 'react-redux';
 
@@ -7,6 +9,7 @@ import {connect} from 'react-redux';
 import ItemsContainer from '../../components/ItemsContainer/ItemsContainer';
 import NavLinks from '../../components/NavLinks/NavLinks';
 import FormInput from '../../components/FormInput/FormInput';
+import Spinner from '../../components/Spinner/Spinner';
 
 
 
@@ -14,11 +17,14 @@ const ContainerComponent = (props) => {
 
   
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
 
   const delimitedSearch = props.search.split(' ').join('%20');
   
 useEffect(() => {
   const fetchData = async () => {
+    setIsLoading(true);
     const res = await fetch(props.search.length>2 ? 
     `https://api.themoviedb.org/3/search/${props.category}?api_key=addad1e44ebe9bd38c42a7e83a8851a9&language=en-US&query=${delimitedSearch}&page=1&include_adult=false&append_to_response=credits`
     :
@@ -27,6 +33,7 @@ useEffect(() => {
     const results = await dataArray.results;
 
      setData(results);
+     setIsLoading(false);
   };
   fetchData();
 },[props.search,props.category]);
@@ -36,10 +43,11 @@ console.log(data[0])
 
 
   return (
-    <div className="mx-10 my-10 md:mx-40">
+    <div className="homepage">
       <NavLinks/>
       <FormInput/>
-      <ItemsContainer data={data} searchCategory={props.category}/>
+      {isLoading? <Spinner/> :
+      <ItemsContainer data={data} searchCategory={props.category}/>}
     </div>
   );
 }

@@ -1,0 +1,98 @@
+.card-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 20px 40px;
+    height: 550px;
+    
+    
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        transition: all .3s ease-in-out;
+    }
+    
+    .image-container{
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    };
+    
+    &:hover{
+        cursor: pointer;
+
+        img{
+            opacity:0.75;
+            transform: scale(1.1);
+            transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+
+        .item-title-container{
+            transform: skewX(0deg) translateX(0px);
+    
+            .title{
+                transform: skewX(0deg);
+            }
+        }
+
+        
+        .rating {
+            background-image: linear-gradient(to right, #00F260, #0575e6);
+            transform: translateX(-15px) translateY(15px) scale(1.15);
+            color: white;
+            text-align: center;
+        }
+
+    }
+
+
+    .item-title-container {
+        position: absolute;
+        padding: 10px 50px;
+        background-color: black;
+        text-align: center;
+        align-content: center;
+        right: 0px;
+        bottom: 60px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        letter-spacing: .2rem;
+        transform: skewX(-15deg) translateX(20px);
+        transition: all .3s ease-in-out;
+        // hd:text-xl 
+
+        .title {
+            display: inline-block;
+            background-image: linear-gradient(to right, #00F260, #0575e6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transform: skewX(15deg);
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    .rating {
+        position: absolute;
+        height:22px ;
+        width: 22px;
+        border-radius: 50%;
+        background-color: black;
+        top: 0;
+        right: 0;
+        transform: translateX(15px) translateY(-15px);
+        padding:13px;
+        color: white;
+        text-align: center;
+        transition: all .3s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card-item{
+        height: 450px;
+    }
+}

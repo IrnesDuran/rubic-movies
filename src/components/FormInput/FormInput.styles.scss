@@ -1,0 +1,22 @@
+.input-container {
+    margin: 20px 40px ;
+
+    .input-field {
+        outline: none;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 10px 20px;
+        width: 100%;
+    
+        &:focus{
+            border: 1px solid transparent;
+            background: 
+                linear-gradient(to right, white, white), 
+                linear-gradient(to right, #00F260, #0575e6);
+            background-clip: padding-box, border-box;
+            background-origin: padding-box, border-box;
+    
+        }
+    }
+}
+

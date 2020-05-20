@@ -6,9 +6,7 @@ import './Logo.styles.scss';
 
 const Logo = () => {
     return(
-        <button className="h-12 m-4"> 
-        <RubLogo className="h-full"/>      
-        </button>
+        <RubLogo className="rubic"/>      
     )};
 
 export default Logo;
