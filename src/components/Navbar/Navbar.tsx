@@ -4,7 +4,7 @@ import './Navbar.styles.scss';
 
 import Logo from '../Logo/Logo';
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
     return(
         <div className="navbar">
             <Link className = 'logo-container' to='/'>

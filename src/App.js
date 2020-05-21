@@ -5,7 +5,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import HomePage from './pages/Homepage/Homepage';
 import ItemPage from './pages/ItemPage/ItemPage';
 
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar.tsx';
 
 
 function App() {

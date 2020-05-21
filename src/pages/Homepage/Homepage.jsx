@@ -9,7 +9,7 @@ import {connect} from 'react-redux';
 import ItemsContainer from '../../components/ItemsContainer/ItemsContainer';
 import NavLinks from '../../components/NavLinks/NavLinks';
 import FormInput from '../../components/FormInput/FormInput';
-import Spinner from '../../components/Spinner/Spinner';
+import Spinner from '../../components/Spinner/Spinner.tsx';
 
 
 
@@ -37,9 +37,6 @@ useEffect(() => {
   };
   fetchData();
 },[props.search,props.category]);
-
-
-console.log(data[0])
 
 
   return (

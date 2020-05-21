@@ -2,6 +2,8 @@ import React from 'react';
 import './NavLinks.styles.scss';
 import { connect } from 'react-redux';
 
+import {Link} from 'react-router-dom';
+
 
 
 //Actions
@@ -11,13 +13,21 @@ const NavbarLinks = (props) => {
 
     let activeLink = props.category==='movie'? 'movie':'tv';
 
+
     return(
         <nav>
-            <a href="#" 
+            <Link className='nav-link' 
+                onClick={props.setToMovie}
+                to='/movies'>Movies</Link>
+            <Link className='nav-link' 
+                onClick={props.setToTv}
+                to='/tv-shows'>TV Shows</Link>
+            <div class={`animation start-${activeLink}`}></div>
+            {/* <a href="#" 
                 onClick={props.setToMovie}>Movies</a>
             <a href="#" 
                 onClick={props.setToTv}>TV Shows</a>
-            <div class={`animation start-${activeLink}`}></div>
+            <div class={`animation start-${activeLink}`}></div> */}
         </nav>
     )};
 
