@@ -5,8 +5,6 @@
     align-content: center;
     margin: 20px 40px;
     height: 700px;
-    
-    
 
     img{
         width: 100%;
@@ -92,5 +90,11 @@
 @media screen and (max-width: 800px) {
     .card-item{
         height: 450px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .homepage {
+        margin:350px;
     }
 }
