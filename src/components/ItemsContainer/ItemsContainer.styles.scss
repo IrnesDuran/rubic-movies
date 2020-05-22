@@ -3,10 +3,26 @@
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
+    pointer-events: none;
+
+    
+    .image-container {
+        pointer-events: auto;
+        transition: all .3s ease-in-out;
+    }
+
+
+
+    &:hover .image-container:not(:hover) {   
+        transform: scale(.98);
+    }
+
 }
+
 
 .item {
     width: 50%;
+    transition: all .3s ease-in-out;
 }
 
 
