@@ -1,3 +1,8 @@
+
+Web Hosted on:
+https://rubictmdb.herokuapp.com/
+
+
 React Developer assignment
 
 Assignment description:
@@ -39,3 +44,17 @@ Working with global state
 React Hooks
 Typescript
 Don’t use Boostrap or similar CSS frameworks, showcase us propper HTML structure and CSS layout skills
+
+
+NOTE FOR RUNNING LOCALLY:
+
+Prerequisite for running the app on local machine is to have Node and npm installed.
+Easiest way to run it is to download ZIP of this repository, upack it, use command terminal to navigate to unpacked zip folder and simply enter "npm install" to install all node packages and dependencies.
+
+AFterwards, in the project directory, simply can run:
+"npm start"
+This command runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
+
+NOTE: Project has been delivred in JSX format....TSX has only been initialized,and only 2 most simple component have been reverted to TSX.
+
