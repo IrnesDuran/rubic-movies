@@ -10,7 +10,6 @@ import Navbar from './components/Navbar/Navbar.tsx'
 function App() {
   return (
     <div>
-      test
       <Navbar />
       <Switch>
         <Route exact path="/" render={() => <Redirect to="/tv-shows" />} />
